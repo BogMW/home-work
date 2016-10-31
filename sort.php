@@ -7,3 +7,8 @@
  */
 $text = $_POST['size'];
 
+$size = explode (" ", $text);
+
+foreach ($size as $item) {
+    echo $item;
+}
