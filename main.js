@@ -24,5 +24,17 @@ $(document).ready(function () {
         });
     });
 
+    $("#size-form").on('submit', function(event) {
+        event.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url  : 'sort.php',
+            data : $("#size-form").serialize() ,
+            success : function(data){
+                $('#size-result').html(data);
+            }
+        });
+    });
+
 });
 
