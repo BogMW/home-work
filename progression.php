@@ -6,8 +6,8 @@ $step = $_POST['progStep'];
 $sum = 0;
 
 function progression($start, $end, $step){
-    if ($start < $end) {
-        echo $start;
+    if ($start < $end+1) {
+        echo "$start ";
         return progression($start+$step, $end, $step);
     }
 };
